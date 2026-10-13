@@ -4,7 +4,7 @@ import "./App.css";
 const GITHUB = "https://github.com/prasanthreddymannem";
 const JOBTRACK_GITHUB = "https://github.com/prasanthreddymannem/jobtrackapplication";
 const JOBTRACK_LIVE = "https://jobtrackapplication-qxau43yf2-prasanthreddymannem.vercel.app";
-const LINKEDIN = "https://www.linkedin.com/in/prasanthreddymannem/";
+const LINKEDIN = "https://www.linkedin.com/in/prasanthreddymannem";
 
 type SectionHeadingProps = {
   number: string;
