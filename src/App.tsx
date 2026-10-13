@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 
 const GITHUB = "https://github.com/prasanthreddymannem";
+const JOBTRACK_GITHUB = "https://github.com/prasanthreddymannem/jobtrackapplication/";
+const JOBTRACK_LIVE = "https://jobtrackapplication-qxau43yf2-prasanthreddymannem.vercel.app/";
 const LINKEDIN = "https://www.linkedin.com/in/prasanthreddymannem/";
 
 type SectionHeadingProps = {
@@ -473,277 +475,67 @@ function App() {
         </section>
 
         {/* ================================
-            PROJECT
+            FEATURED PROJECT — JOBTRACK
         ================================= */}
 
-        <section
-          id="projects"
-          className="section project-section"
-        >
-
+        <section id="projects" className="section project-section jt-project-section">
           <div className="container">
-
             <SectionHeading
               number="02"
-              eyebrow="FEATURED PROJECT"
-              title={
-                <>
-                  From idea to
-                  <br />
-                  <span>working product.</span>
-                </>
-              }
-              description="A full-stack personal finance application built independently to deepen practical experience across frontend, backend, security and databases."
+              eyebrow="FEATURED PROJECT · BUILT & DEPLOYED"
+              title={<>A better way to <br /><span>track the next move.</span></>}
+              description="JobTrack is a full-stack job application manager designed to keep applications, progress and follow-ups organized in one focused workspace."
             />
 
-            <article className="project-card reveal">
-
-              <div className="project-preview">
-
-                <div className="browser">
-
-                  <div className="browser-bar">
-
-                    <div className="browser-dots">
-                      <i />
-                      <i />
-                      <i />
-                    </div>
-
-                    <div className="browser-url">
-                      finance-tracker.local/dashboard
-                    </div>
-
+            <article className="jt-featured-card reveal">
+              <div className="jt-visual-panel">
+                <div className="jt-window">
+                  <div className="jt-window-top">
+                    <div className="jt-window-brand"><span className="jt-brand-mark">J</span><strong>jobtrack</strong></div>
+                    <div className="jt-window-dots"><i /><i /><i /></div>
                   </div>
-
-                  <div className="dashboard">
-
-                    <aside className="dashboard-sidebar">
-
-                      <strong>FT</strong>
-
-                      <div className="sidebar-item active">
-                        <span />
-                        Overview
-                      </div>
-
-                      <div className="sidebar-item">
-                        <span />
-                        Transactions
-                      </div>
-
-                      <div className="sidebar-item">
-                        <span />
-                        Analytics
-                      </div>
-
-                      <div className="sidebar-item">
-                        <span />
-                        Settings
-                      </div>
-
+                  <div className="jt-app-layout">
+                    <aside className="jt-sidebar">
+                      <span className="jt-sidebar-label">WORKSPACE</span>
+                      <div className="jt-nav-item jt-nav-active"><b>▦</b> Overview</div>
+                      <div className="jt-nav-item"><b>▤</b> Applications</div>
+                      <div className="jt-nav-item"><b>◷</b> Interviews</div>
+                      <div className="jt-nav-item"><b>☆</b> Saved roles</div>
+                      <div className="jt-sidebar-bottom"><span className="jt-avatar">P</span><span><strong>My workspace</strong><small>Personal account</small></span></div>
                     </aside>
-
-                    <div className="dashboard-main">
-
-                      <div className="dashboard-header">
-
-                        <div>
-                          <small>
-                            OVERVIEW
-                          </small>
-
-                          <h4>
-                            Good morning, Prasanth
-                          </h4>
-                        </div>
-
-                        <div className="avatar">
-                          PR
-                        </div>
-
+                    <div className="jt-dashboard">
+                      <div className="jt-dashboard-heading"><div><small>YOUR JOB SEARCH</small><h3>Application overview<span>.</span></h3><p>Every opportunity, in one place.</p></div><span className="jt-date-chip">Workspace</span></div>
+                      <div className="jt-metric-grid">
+                        <div className="jt-metric jt-metric-highlight"><span>Total applications</span><strong>Track</strong><small>All your opportunities</small><i>↗</i></div>
+                        <div className="jt-metric"><span>In progress</span><strong>Active</strong><small>Keep moving forward</small><i>◷</i></div>
+                        <div className="jt-metric"><span>Next step</span><strong>Follow up</strong><small>Stay on top of updates</small><i>↗</i></div>
                       </div>
-
-                      <div className="balance-grid">
-
-                        <div className="balance-card primary">
-                          <span>
-                            Total Balance
-                          </span>
-
-                          <strong>
-                            ₹84,250
-                          </strong>
-
-                          <small>
-                            +12.8% this month
-                          </small>
-                        </div>
-
-                        <div className="balance-card">
-                          <span>
-                            Income
-                          </span>
-
-                          <strong>
-                            ₹62,500
-                          </strong>
-
-                          <small className="green">
-                            +8.4%
-                          </small>
-                        </div>
-
-                        <div className="balance-card">
-                          <span>
-                            Expenses
-                          </span>
-
-                          <strong>
-                            ₹18,250
-                          </strong>
-
-                          <small className="red">
-                            -3.2%
-                          </small>
-                        </div>
-
-                      </div>
-
-                      <div className="dashboard-lower">
-
-                        <div className="chart-card">
-
-                          <div className="chart-header">
-                            <span>
-                              Cash flow
-                            </span>
-
-                            <small>
-                              Last 7 months
-                            </small>
-                          </div>
-
-                          <div className="chart">
-
-                            {[32, 48, 40, 63, 55, 76, 67].map(
-                              (height, index) => (
-                                <div
-                                  key={index}
-                                  className="chart-bar"
-                                  style={{
-                                    height: `${height}%`,
-                                  }}
-                                />
-                              )
-                            )}
-
-                          </div>
-
-                        </div>
-
-                        <div className="recent-card">
-
-                          <span>
-                            Recent
-                          </span>
-
-                          <Transaction
-                            name="Salary"
-                            amount="+₹62,500"
-                            positive
-                          />
-
-                          <Transaction
-                            name="Groceries"
-                            amount="-₹2,450"
-                          />
-
-                          <Transaction
-                            name="Transport"
-                            amount="-₹1,200"
-                          />
-
-                        </div>
-
-                      </div>
-
+                      <div className="jt-table-card"><div className="jt-table-heading"><strong>Recent applications</strong><span>Organized at a glance</span></div><div className="jt-table-row jt-table-header"><span>COMPANY / ROLE</span><span>STATUS</span><span>TRACK</span></div><div className="jt-table-row"><span className="jt-company"><i className="jt-company-icon jt-company-purple">N</i><span><strong>Northstar Labs</strong><small>Software Engineer</small></span></span><em className="jt-status jt-status-interview">Interview</em><b className="jt-row-arrow">↗</b></div><div className="jt-table-row"><span className="jt-company"><i className="jt-company-icon jt-company-blue">A</i><span><strong>Atlas Systems</strong><small>Backend Developer</small></span></span><em className="jt-status jt-status-applied">Applied</em><b className="jt-row-arrow">↗</b></div><div className="jt-table-row"><span className="jt-company"><i className="jt-company-icon jt-company-orange">S</i><span><strong>Summit Digital</strong><small>Full Stack Engineer</small></span></span><em className="jt-status jt-status-review">In review</em><b className="jt-row-arrow">↗</b></div></div>
                     </div>
-
                   </div>
-
                 </div>
-
+                <div className="jt-visual-caption"><span className="jt-live-dot" /> PRODUCT UI CONCEPT <span>·</span> JOB SEARCH WORKSPACE</div>
               </div>
 
-              <div className="project-content">
-
-                <span className="project-label">
-                  PERSONAL PROJECT · 2025
-                </span>
-
-                <h3>
-                  Personal Finance Tracker
-                </h3>
-
-                <p className="project-intro">
-                  A secure full-stack application for
-                  managing personal income and expenses,
-                  with authenticated user-specific data.
-                </p>
-
-                <div className="project-features">
-
-                  <Feature
-                    title="Authentication"
-                    text="JWT-based authentication and user authorization."
-                  />
-
-                  <Feature
-                    title="Transactions"
-                    text="Complete create, edit, cancel and delete workflows."
-                  />
-
-                  <Feature
-                    title="Validation"
-                    text="DTO-based validation using Jakarta Bean Validation."
-                  />
-
-                  <Feature
-                    title="Error Handling"
-                    text="Centralized API exception handling with @RestControllerAdvice."
-                  />
-
+              <div className="jt-project-details">
+                <div className="jt-project-kicker"><span className="jt-kicker-dot" /> PERSONAL PROJECT <span className="jt-kicker-line" /> FULL STACK</div>
+                <h3>JobTrack<span> — </span><br className="jt-title-break" />Application Manager</h3>
+                <p className="jt-project-description">A practical end-to-end project built to solve a real problem: keeping job applications organized without scattered spreadsheets or forgotten follow-ups.</p>
+                <div className="jt-feature-list">
+                  <div className="jt-feature-item"><span>01</span><div><strong>Secure authentication</strong><p>Registration and login with token-based authentication.</p></div><b>↗</b></div>
+                  <div className="jt-feature-item"><span>02</span><div><strong>Application management</strong><p>Create, view and manage job application records.</p></div><b>↗</b></div>
+                  <div className="jt-feature-item"><span>03</span><div><strong>Full-stack architecture</strong><p>React UI connected to a Spring Boot backend and PostgreSQL.</p></div><b>↗</b></div>
                 </div>
-
-                <div className="project-tags">
-                  <span>React.js</span>
-                  <span>Spring Boot</span>
-                  <span>Spring Security</span>
-                  <span>JWT</span>
-                  <span>MySQL</span>
-                  <span>Axios</span>
+                <div className="jt-stack-label">BUILT WITH</div>
+                <div className="jt-tech-stack"><span>React</span><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>PostgreSQL</span><span>Vercel</span><span>Render</span></div>
+                <div className="jt-project-actions">
+                  <a className="jt-primary-link" href={JOBTRACK_GITHUB} target="_blank" rel="noreferrer">Explore source code <span>↗</span></a>
+                  {JOBTRACK_LIVE && <a className="jt-secondary-link" href={JOBTRACK_LIVE} target="_blank" rel="noreferrer">Open live app <span>↗</span></a>}
                 </div>
-
-                <a
-                  className="project-github"
-                  href={GITHUB}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>
-                    View project on GitHub
-                  </span>
-
-                  <b>↗</b>
-                </a>
-
+                {!JOBTRACK_LIVE && <p className="jt-live-note">Open the deployed application to explore JobTrack.</p>}
               </div>
-
             </article>
-
           </div>
-
         </section>
 
         {/* ================================
