@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 
 const GITHUB = "https://github.com/prasanthreddymannem";
-const JOBTRACK_GITHUB = "https://github.com/prasanthreddymannem/jobtrackapplication/";
-const JOBTRACK_LIVE = "https://jobtrackapplication-qxau43yf2-prasanthreddymannem.vercel.app/";
+const JOBTRACK_GITHUB = "https://github.com/prasanthreddymannem/jobtrackapplication";
+const JOBTRACK_LIVE = "https://jobtrackapplication-qxau43yf2-prasanthreddymannem.vercel.app";
 const LINKEDIN = "https://www.linkedin.com/in/prasanthreddymannem/";
 
 type SectionHeadingProps = {
@@ -19,10 +19,6 @@ type ExperiencePointProps = {
   text: string;
 };
 
-type FeatureProps = {
-  title: string;
-  text: string;
-};
 
 type ApproachCardProps = {
   number: string;
@@ -30,11 +26,6 @@ type ApproachCardProps = {
   text: string;
 };
 
-type TransactionProps = {
-  name: string;
-  amount: string;
-  positive?: boolean;
-};
 
 const skills: Record<string, string[]> = {
   Backend: [
@@ -900,35 +891,6 @@ function ExperiencePoint({
 }
 
 /* =========================================
-   FEATURE
-========================================= */
-
-function Feature({
-  title,
-  text,
-}: FeatureProps) {
-  return (
-    <div className="feature">
-
-      <span />
-
-      <div>
-
-        <strong>
-          {title}
-        </strong>
-
-        <p>
-          {text}
-        </p>
-
-      </div>
-
-    </div>
-  );
-}
-
-/* =========================================
    APPROACH CARD
 ========================================= */
 
@@ -953,36 +915,6 @@ function ApproachCard({
       </p>
 
     </article>
-  );
-}
-
-/* =========================================
-   TRANSACTION
-========================================= */
-
-function Transaction({
-  name,
-  amount,
-  positive = false,
-}: TransactionProps) {
-  return (
-    <div className="transaction">
-
-      <div className="transaction-icon" />
-
-      <span>
-        {name}
-      </span>
-
-      <strong
-        className={
-          positive ? "positive" : ""
-        }
-      >
-        {amount}
-      </strong>
-
-    </div>
   );
 }
 
